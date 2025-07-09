@@ -36,24 +36,21 @@ class _OnboardingScreenBranchState extends State<OnboardingScreenBranch> {
             },
             children: [
               BuildPage(
-                color: Colors.blue,
                 title: 'Various Collection  Of\n The Latest Products',
                 description:
                     '    Urna amet, suspendisse ullamcorper ac elit diam facilisis cursus vestibulum.',
                 imagePath: "asset/OnBroadScreen/s1.jpg",
               ),
               BuildPage(
-                color: Colors.red,
                 title: 'Complete Collection\n of size and Colors',
                 description:
                     '    Urna amet, suspendisse ullamcorper ac elit diam facilisis cursus vestibulum.',
                 imagePath: "asset/OnBroadScreen/s2.jpg",
               ),
               BuildPage(
-                color: Colors.green,
                 title: 'Find Most Suitable\n Outfit For You',
                 description:
-                    'Urna amet, suspendisse ullamcorper ac elit\n diam facilisis cursus vestibulum.',
+                    '      Urna amet, suspendisse ullamcorper ac elit\n diam facilisis cursus vestibulum.',
                 imagePath: "asset/OnBroadScreen/s3.jpg",
               ),
             ],
@@ -95,9 +92,7 @@ class _OnboardingScreenBranchState extends State<OnboardingScreenBranch> {
             child: InkWell(
               onTap: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const Loginpage(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const Loginpage()),
                 );
               },
               child: Text(

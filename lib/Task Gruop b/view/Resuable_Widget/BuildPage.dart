@@ -5,14 +5,13 @@ import 'package:task_of_traing_b/Task%20Gruop%20b/view/Styles/TextStyle.dart'
 
 // ignore: must_be_immutable
 class BuildPage extends StatelessWidget {
-  Color color;
   String title;
   String description;
   String imagePath;
 
   BuildPage({
     super.key,
-    required this.color,
+
     required this.title,
     required this.description,
     required this.imagePath,
@@ -23,7 +22,7 @@ class BuildPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 70),
+          SizedBox(height: 50),
           Center(
             child: Container(
               width: 250,
@@ -33,14 +32,17 @@ class BuildPage extends StatelessWidget {
                   image: AssetImage(imagePath),
                   fit: BoxFit.cover,
                 ),
-                color: color,
                 borderRadius: BorderRadius.circular(55),
               ),
             ),
           ),
-          SizedBox(height: 15),
-          Text(title, style: Textstyles.textStyle_3,textAlign: TextAlign.center,),
           SizedBox(height: 10),
+          Text(
+            title,
+            style: Textstyles.textStyle_3,
+            textAlign: TextAlign.center,
+          ),
+
           Text(
             description,
             style: Textstyles.textStyle_4,

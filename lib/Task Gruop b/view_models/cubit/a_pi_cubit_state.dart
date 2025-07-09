@@ -3,22 +3,18 @@ part of 'a_pi_cubit_cubit.dart';
 @immutable
 sealed class APiCubitState {}
 
-class APiCubitInitial extends APiCubitState {}
+final class APiCubitInitial extends APiCubitState {}
 
-class APiCubitLoginRequest extends APiCubitState {
-  final List<String> loginUser;
-  final List<String> Password;
+final class APiCubitLoading extends APiCubitState {}
 
-  APiCubitLoginRequest({required this.loginUser, required this.Password});
+final class APiCubitSuccess extends APiCubitState {
+ 
+  final Map<String, dynamic> userData;
+
+  APiCubitSuccess(this.userData);
 }
 
-class APiCubitLoginSucess extends APiCubitState {
-  final List<String> user;
-
-  APiCubitLoginSucess({required this.user});
-}
-
-class APiCubitLoginFailed extends APiCubitState {
-  final String error;
-  APiCubitLoginFailed({required this.error});
+final class APiCubitError extends APiCubitState {
+  final String message;
+  APiCubitError(this.message, );
 }
