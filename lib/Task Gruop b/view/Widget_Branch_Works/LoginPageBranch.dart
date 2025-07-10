@@ -7,7 +7,7 @@ import 'package:task_of_traing_b/Task%20Gruop%20b/view/Resuable_Widget/TextField
 import 'package:task_of_traing_b/Task%20Gruop%20b/view/Resuable_Widget/TextPasswordField.dart';
 
 import 'package:task_of_traing_b/Task%20Gruop%20b/view/Styles/TextStyle.dart';
-import 'package:task_of_traing_b/Task%20Gruop%20b/view_models/cubit/login_cubit.dart';
+import 'package:task_of_traing_b/Task%20Gruop%20b/view_models/Bloc%20Pattern/Login%20Cubit/login_cubit.dart';
 
 class Loginpagebranch extends StatefulWidget {
   const Loginpagebranch({super.key});

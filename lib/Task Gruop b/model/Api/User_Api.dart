@@ -22,4 +22,26 @@ class UserData {
       throw Exception(e);
     }
   }
+
+static Future getUserAccount({
+    required String fristName,
+    required String lastName,
+    required String image,
+    required String accessToken,
+  }) async {
+    final dioRequest = dio.Dio();
+    try {
+      var respons = await dioRequest.post(
+        "https://dummyjson.com/auth/login",
+        data: {"firstName": fristName,"lastName":lastName,"image":image,"accessToken":accessToken},
+        options: Options(headers: {'Content-Type': 'application/json'}),
+      );
+      if (respons.statusCode == 200) {
+        return respons.data;
+      }
+    } catch (e) {
+      throw Exception(e);
+    }
+  }
+
 }
